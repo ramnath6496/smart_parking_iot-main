@@ -1,5 +1,10 @@
 import React from 'react';
 import "./home.css"
+import Rohit from '../../assets/rohitraj.png'
+import Mandip from '../../assets/mandip.jpg'
+import Dipendra from '../../assets/dipendra.jpg'
+import Rahul from '../../assets/rahul.jpg'
+import Bishal from '../../assets/bishal.jpg'
 
 const Home = () => {
   return (
@@ -113,7 +118,7 @@ const Home = () => {
             <div className="members">
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/rahul.jpg" alt="" />
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr_h39hnmThaV6KfMbOQiS47AbMMiZlHqJY5cHX4OBR9LdIktnMb52L2uK1MAc33qAWD4l36NRPHSoUNmwFJfQG1hge9DAO3r0ngu72AZnfUS2wlOG35IOZlXoVUE9VaygOtRI8tLNLzcSBce1kpzcl_Lbm_iLrkUEU9g_zzRL6lUQMOaHlP6g0qRu/s2304/IMG20220515161820_00.jpg" alt="" />
                     </div>
                     <div className="details">
                         <h3>Aadarsh Kushuwaha</h3>
@@ -154,10 +159,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/ankita.jpg" alt="" />
+                        <img src={Mandip} alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-2</h3>
+                        <h3>Mandeep Shah</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">
@@ -195,10 +200,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/bishal.jpg" alt="" />
+                        <img src={Rohit} alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-3</h3>
+                        <h3>Rohit Raj Srivastava</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">
@@ -236,10 +241,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/ramnath.jpg" alt="" />
+                        <img src="https://scontent.fsif1-1.fna.fbcdn.net/v/t39.30808-6/428616266_1049588536127007_7492041968453688348_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=btyFOeCrkuIAX9-cZrQ&_nc_ht=scontent.fsif1-1.fna&oh=00_AfB0kwHq3Wp5HQBpoTQN_MYbM8uhUljkjnO-1TslMP8Upg&oe=65F67035" alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-4</h3>
+                        <h3>Chhuparustam kr. Kushwaha</h3>
                         <p>Developer</p>
                         <div className="contact">
                             <div className="icons">
@@ -277,10 +282,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/dipendra.jpg" alt="" />
+                        <img src={Rahul} alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-5</h3>
+                        <h3>Rahul Kr. Gupta</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">
@@ -318,10 +323,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/dipendra.jpg" alt="" />
+                        <img src={Bishal} alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-5</h3>
+                        <h3>Bishal Kr. Gupta</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">
@@ -359,10 +364,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/dipendra.jpg" alt="" />
+                        <img src="https://media.licdn.com/dms/image/D4D03AQHiWeiC7KUvbg/profile-displayphoto-shrink_800_800/0/1708499363166?e=2147483647&v=beta&t=NmmCm6KLoMRXZP3GfNriScKnF1-2MPIIBby6-t6supE" alt="Ramnath Mahato Dhanuk" />
                     </div>
                     <div className="details">
-                        <h3>Member-5</h3>
+                        <h3>Ramnath M. Dhanuk</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">
@@ -400,10 +405,10 @@ const Home = () => {
                 </div>
                 <div className="content-section">
                     <div className="profile">
-                        <img src="/dipendra.jpg" alt="" />
+                        <img src={Dipendra} alt="" />
                     </div>
                     <div className="details">
-                        <h3>Member-5</h3>
+                        <h3>Dipendra Kushuwaha</h3>
                         <p>Role</p>
                         <div className="contact">
                             <div className="icons">

@@ -248,6 +248,7 @@ img {
   height: 175px;
   border-radius: 50%;
   margin: auto;
+  object-fit: cover;
   padding-top: 10px;
   margin-bottom: 0;
   border: 1px solid #ccc;
@@ -258,7 +259,7 @@ img {
 .members .content-section {
   box-shadow: 0 0 10px #555;
   border-radius: 20px;
-    background-color: #fff;
+  background-color: #fff;
   overflow: hidden;
   transition: transform 0.3s ease;
   max-height: 500px;
@@ -321,37 +322,42 @@ img {
   gap: 30px;
 
 }
+
 .parking-boc-section {
   display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 75px 0;
-    position: relative;
-    margin: 5px 0;
-    box-shadow: 0 0 6px #fff;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+  justify-content: space-around;
+  align-items: center;
+  padding: 75px 0;
+  position: relative;
+  margin: 5px 0;
+  box-shadow: 0 0 6px #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
+
 .parking-boc-section:hover {
   transform: scale(1.05);
 }
+
 .parking-value {
   background: green;
-    border-radius: 10px;
-      position: absolute;
+  border-radius: 10px;
+  position: absolute;
   width: 100%;
   top: 0;
   bottom: 0;
   font-size: 0;
 }
+
 .parking-value.car-parked {
   background: red;
 }
+
 .parking-name {
   position: relative;
   z-index: 3;
   font-size: 22px;
-    font-weight: 600;
-    font-family: cursive;
+  font-weight: 600;
+  font-family: cursive;
 
 }
