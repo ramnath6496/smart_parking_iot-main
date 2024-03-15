@@ -361,3 +361,7 @@ img {
   font-family: cursive;
 
 }
+
+.parking-boc-section.car-parked .parking-value{
+  background-color: red;
+}
