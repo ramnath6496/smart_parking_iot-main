@@ -34,7 +34,7 @@ const Home = () => {
       {/* Header Section */}
       <header>
         {/* Include your logo or website name */}
-        <h1>Smart Marking System</h1>
+        <h1>Smart Parking System</h1>
         {/* Navigation Menu */}
         <nav>
           <ul>
@@ -65,9 +65,9 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         {/* Include a banner with key features */}
-        <h2>Your Smart Marking Solution</h2>
+        <h2>Your Smart Parking Solution</h2>
         <p>
-          Revolutionize the way you grade and assess with our advanced marking
+          Revolutionize the way you grade and assess with our advanced parking
           system.
         </p>
         {/* Optionally, add a call-to-action button */}
@@ -867,7 +867,7 @@ const Home = () => {
           {/* Additional social media icons */}
         </div>
         {/* Copyright information */}
-        <p>&copy; 2024 Smart Marking System. All rights reserved.</p>
+        <p>&copy; 2024 Smart Parking System. All rights reserved.</p>
       </footer>
     </div>
   );
