@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "./home.css";
 import Rohit from "../../assets/rohitraj.png";
@@ -116,18 +116,15 @@ const Home = () => {
       </section>
 
             {/* How It Works Section */}
-            <section id="how-it-works" className="how-it-works">
-                {/* Step-by-step overview */}
+            {/* <section id="how-it-works" className="how-it-works">
                 <h2>How It Works</h2>
-                {/* Include steps with diagrams or screenshots */}
                 <div className="steps">
                     <div className="step">
                         <img src="step1.png" alt="Step 1" />
                         <p>Step 1 description.</p>
                     </div>
-                    {/* Additional steps */}
                 </div>
-            </section>
+            </section> */}
 
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials">
