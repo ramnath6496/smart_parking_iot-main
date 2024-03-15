@@ -179,7 +179,7 @@ const Home = () => {
               </div>
               <div className="details">
                 <h3>Aadarsh Kushuwaha</h3>
-                <p>Developer</p>
+                <p>Lead Developer</p>
                 <div className="contact">
                   <div className="icons">
                     <a href="#" className="social-medial-icons">
