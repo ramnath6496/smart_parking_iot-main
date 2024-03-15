@@ -254,7 +254,7 @@ const Home = () => {
               </div>
               <div className="details">
                 <h3>Mandeep Shah</h3>
-                <p>Role</p>
+                <p>React Developer</p>
                 <div className="contact">
                   <div className="icons">
                     <a href="#" className="social-medial-icons">
@@ -635,7 +635,7 @@ const Home = () => {
               </div>
               <div className="details">
                 <h3>Ramnath M. Dhanuk</h3>
-                <p>Role</p>
+                <p>UI/UX Designer</p>
                 <div className="contact">
                   <div className="icons">
                     <a href="#" className="social-medial-icons">
@@ -785,7 +785,7 @@ const Home = () => {
                             </div>
                             <div className="details">
                                 <h3>Saroj Chaudhary</h3>
-                                <p>Supporter</p>
+                                <p>IoT Mentor</p>
                                 <div className="contact">
                                     <div className="icons">
                                         <a href="#" className="social-medial-icons">
@@ -826,7 +826,7 @@ const Home = () => {
                             </div>
                             <div className="details">
                                 <h3>Bikash Rashaili</h3>
-                                <p>Supporter</p>
+                                <p>Mentor</p>
                                 <div className="contact">
                                     <div className="icons">
                                         <a href="#" className="social-medial-icons">
