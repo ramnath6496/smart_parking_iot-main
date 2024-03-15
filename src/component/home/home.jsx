@@ -63,18 +63,18 @@ const Home = () => {
             </section>
 
             {/* How It Works Section */}
-            {/* <section id="how-it-works" className="how-it-works"> */}
+            <section id="how-it-works" className="how-it-works">
                 {/* Step-by-step overview */}
-                {/* <h2>How It Works</h2> */}
+                <h2>How It Works</h2>
                 {/* Include steps with diagrams or screenshots */}
-                {/* <div className="steps">
+                <div className="steps">
                     <div className="step">
                         <img src="step1.png" alt="Step 1" />
                         <p>Step 1 description.</p>
-                    </div> */}
+                    </div>
                     {/* Additional steps */}
-                {/* </div> */}
-            {/* </section> */}
+                </div>
+            </section>
 
             {/* Testimonials Section */}
             <section id="testimonials" className="testimonials">
