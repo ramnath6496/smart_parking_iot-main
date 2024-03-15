@@ -72,6 +72,7 @@ nav ul li a {
 
 .how-it-works h2 {
   margin-bottom: 20px;
+  color: #333;
 }
 
 .steps {
@@ -108,6 +109,7 @@ nav ul li a {
 
 .pricing h2 {
   margin-bottom: 20px;
+  color: #333;
 }
 
 .plans {
@@ -146,7 +148,6 @@ nav ul li a {
 /* About Us Section Styles */
 .about-us {
   padding: 50px;
-  background-color: #cfcfcf;
 }
 
 .about-us h2 {
@@ -155,11 +156,55 @@ nav ul li a {
 
 /* Contact Us Section Styles */
 .contact-us {
+  background-color: #ddd;
   padding: 50px;
+  box-sizing: border-box;
 }
 
 .contact-us h2 {
+  color: #333;
   margin-bottom: 20px;
+}
+.contact-us .contact{
+  width: 400px;
+  margin: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 6px #333;
+  background-color: #b4cfd1;
+}
+.contact-us .contact .fields{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact-us .contact .fields label{
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+.fields input, .fields textarea{
+  display: block;
+  width: 95%;
+  padding: 10px;
+  background-color: #eee;
+  color: #444;
+  font-weight: 500;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+.fields input:focus,
+.fields textarea:focus{
+  background-color: #fff;
+}
+.button button{
+  background-color: #333;
+  transition: all 0.4s ease;
+}
+.button button:hover{
+  background-color: #fff;
+  color: #333;
 }
 
 /* Footer Section Styles */
