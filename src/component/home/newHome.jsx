@@ -11,8 +11,10 @@ import {
   getDoc,
   Timestamp,
 } from "firebase/firestore";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCar } from "@fortawesome/free-solid-svg-icons";
 
-const Home = () => {
+const Slot = () => {
   const [data, setData] = useState(null);
   const [slotStatus, setSlotStatus] = useState({});
   const [selectedSlot, setSelectedSlot] = useState(null);
@@ -129,7 +131,7 @@ const Home = () => {
       await setDoc(slotRef, {
         status: "",
         userID: "",
-        timestamp: null,
+        timestamp: "",
       });
 
       const pastBookingsCollRef = collection(db, "pastBookings");
@@ -167,143 +169,230 @@ const Home = () => {
   }, [selectedSlot]);
 
   return (
-    <section id="slots" className="slots container">
+    <div className="slots container">
       <h2>Parking Slots</h2>
       <div className="parking container">
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v0, slotStatus["slot0"]) : "nullStatus"
           }`}>
-          <div className="parking-name">Parking 1</div>
-          <div className="parking-value">
-            {slotStatus["slot0"] === "booked" ? (
-              <div>
-                {datawa.slot0 && datawa.slot0.userID === myUid ? (
-
-                  <>
-                  <button onClick={() => handleReturn("slot0")}>
-                    Return Slot
-                  </button>
-                  </>
-                ) : (
-                  "Booked"
-                )}
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  if (!myUid) {
-                    alert("Please login to prebook a slot!");
-                    return;
-                  }
-                  setSelectedSlot("slot0");
-                }}>
-                Book Slot
-              </button>
-            )}
+          <div className="up-card">
+            <div className="parking-name">
+              <FontAwesomeIcon icon={faCar} />
+            </div>
+            <div className="parking-value">
+              {slotStatus["slot0"] === "booked" ? (
+                <div>
+                  {datawa.slot0 && datawa.slot0.userID === myUid ? (
+                    <>
+                      <button onClick={() => handleReturn("slot0")}>
+                        Return Slot
+                      </button>
+                    </>
+                  ) : (
+                    "Booked"
+                  )}
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    if (!myUid) {
+                      alert("Please login to prebook a slot!");
+                      return;
+                    }
+                    setSelectedSlot("slot0");
+                  }}>
+                  Book Slot
+                </button>
+              )}
+            </div>
           </div>
-
-          {datawa.slot0 && datawa.slot0.timestamp}
-          
+          {/* {  console.log(datawa.slot0 )} */}
+          {datawa.slot0 && datawa.slot0.timestamp != "" && (
+            <div className="btm-card">
+              <p>
+                {new Date(datawa.slot0.timestamp).toLocaleString([], {
+                  // month: "numeric",
+                  // day: "2-digit",
+                  // year: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  // second: "2-digit",
+                  hour12: true,
+                })}
+              </p>
+            </div>
+          )}
         </div>
 
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v1, slotStatus["slot1"]) : "nullStatus"
           }`}>
-          <div className="parking-name">Parking 2</div>
-          <div className="parking-value">
-            {slotStatus["slot1"] === "booked" ? (
-              <div>
-                {datawa.slot1 && datawa.slot1.userID === myUid ? (
-                  <button onClick={() => handleReturn("slot1")}>
-                    Return Slot
-                  </button>
-                ) : (
-                  "Booked"
-                )}
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  if (!myUid) {
-                    alert("Please login to prebook a slot!");
-                    return;
-                  }
-                  setSelectedSlot("slot1");
-                }}>
-                Book Slot
-              </button>
-            )}
+          <div className="up-card">
+            <div className="parking-name">
+              <FontAwesomeIcon icon={faCar} />
+            </div>
+            <div className="parking-value">
+              {slotStatus["slot1"] === "booked" ? (
+                <div>
+                  {datawa.slot1 && datawa.slot1.userID === myUid ? (
+                    <button onClick={() => handleReturn("slot1")}>
+                      Return Slot
+                    </button>
+                  ) : (
+                    "Booked"
+                  )}
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    if (!myUid) {
+                      alert("Please login to prebook a slot!");
+                      return;
+                    }
+                    setSelectedSlot("slot1");
+                  }}>
+                  Book Slot
+                </button>
+              )}
+            </div>
           </div>
-          {datawa.slot1 && datawa.slot1.timestamp}
-
+          {datawa.slot1 && datawa.slot1.timestamp != "" && (
+            <div className="btm-card">
+              <p>
+                {new Date(datawa.slot1.timestamp).toLocaleString([], {
+                  // month: "numeric",
+                  // day: "2-digit",
+                  // year: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  // second: "2-digit",
+                  hour12: true,
+                })}
+              </p>
+            </div>
+          )}
         </div>
 
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v2, slotStatus["slot2"]) : "nullStatus"
-          }`}>
-          <div className="parking-name">Parking 3</div>
-          <div className="parking-value">
-            {slotStatus["slot2"] === "booked" ? (
-              <div>
-                {datawa.slot2 && datawa.slot2.userID === myUid ? (
-                  <button onClick={() => handleReturn("slot2")}>
-                    Return Slot
-                  </button>
-                ) : (
-                  "Booked"
-                )}
-              </div>
-            ) : (
-              <button
-                onClick={() => {
-                  if (!myUid) {
-                    alert("Please login to prebook a slot!");
-                    return;
-                  }
-                  setSelectedSlot("slot2");
-                }}>
-                Book Slot
-              </button>
-            )}
+          } `}>
+          <div className="up-card">
+            <div className="parking-name">
+              <FontAwesomeIcon icon={faCar} />
+            </div>
+            <div className="parking-value">
+              {slotStatus["slot2"] === "booked" ? (
+                <div>
+                  {datawa.slot2 && datawa.slot2.userID === myUid ? (
+                    <button onClick={() => handleReturn("slot2")}>
+                      Return Slot
+                    </button>
+                  ) : (
+                    "Booked"
+                  )}
+                </div>
+              ) : (
+                <button
+                  onClick={() => {
+                    if (!myUid) {
+                      alert("Please login to prebook a slot!");
+                      return;
+                    }
+                    setSelectedSlot("slot2");
+                  }}>
+                  Book Slot
+                </button>
+              )}
+            </div>
           </div>
-
-          {datawa.slot2 && datawa.slot2.timestamp}
+          {datawa.slot2 && datawa.slot2.timestamp != "" && (
+            <div className="btm-card">
+              <p>
+                {new Date(datawa.slot2.timestamp).toLocaleString([], {
+                  // month: "numeric",
+                  // day: "2-digit",
+                  // year: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  // second: "2-digit",
+                  hour12: true,
+                })}
+              </p>
+            </div>
+          )}
         </div>
       </div>
-      <div ref={dialogRef} className="dialog">
+
+      <div className="parking-indicator">
+        <div className="car Available">
+          <span>
+            <FontAwesomeIcon icon={faCar} />
+          </span>
+          Available
+        </div>
+        <div className="car noBookPark">
+          <span>
+            <FontAwesomeIcon icon={faCar} />
+          </span>
+          Not Booked yet Parked
+        </div>
+        <div className="car ParkBooked">
+          <span>
+            <FontAwesomeIcon icon={faCar} />
+          </span>
+          Parked
+        </div>
+        <div className="car BookedOnly">
+          <span>
+            <FontAwesomeIcon icon={faCar} />
+          </span>
+          Booked
+        </div>
+      </div>
+      <div
+        ref={dialogRef}
+        className="dialog"
+        style={{ display: selectedSlot ? "block" : "none" }}>
         <div className="dialog-content">
           <span className="close" onClick={() => setSelectedSlot(null)}>
             &times;
           </span>
           <h2>Booking Details</h2>
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Vehicle Number"
-            value={vehicleNumber}
-            onChange={(e) => setVehicleNumber(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Mobile"
-            value={mobile}
-            onChange={(e) => setMobile(e.target.value)}
-          />
-          <button onClick={() => handleBooking(name, vehicleNumber, mobile)}>
+          <div className="dialog-input">
+            <input
+              className="input-field"
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              className="input-field"
+              type="text"
+              placeholder="Vehicle Number"
+              value={vehicleNumber}
+              onChange={(e) => setVehicleNumber(e.target.value)}
+            />
+            <input
+              className="input-field"
+              type="text"
+              placeholder="Mobile"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
+          </div>
+          <button
+            className="book-button"
+            onClick={() => handleBooking(name, vehicleNumber, mobile)}>
             Book Now
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Home;
+export default Slot;
