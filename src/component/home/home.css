@@ -9,8 +9,14 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px 50px;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +46,7 @@ nav ul li a {
 }
 
 .hero h2 {
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
@@ -90,15 +97,18 @@ nav ul li a {
 
 /* Testimonials Section Styles */
 .testimonials {
+  background-color: #eee;
   padding: 50px;
 }
 
 .testimonials h2 {
+  color: #333;
   margin-bottom: 20px;
 }
 
-.testimonial {
+.testimonial img {
   text-align: center;
+  border-radius: 10px;
 }
 
 /* Pricing Section Styles */
@@ -156,7 +166,7 @@ nav ul li a {
 
 /* Contact Us Section Styles */
 .contact-us {
-  background-color: #ddd;
+  background-color: #eee;
   padding: 50px;
   box-sizing: border-box;
 }
@@ -165,7 +175,7 @@ nav ul li a {
   color: #333;
   margin-bottom: 20px;
 }
-.contact-us .contact{
+.contact-us .contact {
   width: 400px;
   margin: auto;
   border: 2px solid #333;
@@ -174,16 +184,17 @@ nav ul li a {
   box-shadow: 0 0 6px #333;
   background-color: #b4cfd1;
 }
-.contact-us .contact .fields{
+.contact-us .contact .fields {
   width: 100%;
   margin-bottom: 10px;
 }
-.contact-us .contact .fields label{
+.contact-us .contact .fields label {
   color: #333;
   font-size: 14px;
   font-weight: 600;
 }
-.fields input, .fields textarea{
+.fields input,
+.fields textarea {
   display: block;
   width: 95%;
   padding: 10px;
@@ -195,14 +206,14 @@ nav ul li a {
   margin-top: 2px;
 }
 .fields input:focus,
-.fields textarea:focus{
+.fields textarea:focus {
   background-color: #fff;
 }
-.button button{
+.button button {
   background-color: #333;
   transition: all 0.4s ease;
 }
-.button button:hover{
+.button button:hover {
   background-color: #fff;
   color: #333;
 }
@@ -262,7 +273,7 @@ img {
   margin-top: 0px;
   position: relative;
   top: -3px;
-  background: #EF3D32;
+  background: #ef3d32;
 }
 
 .content-section p {
@@ -286,6 +297,7 @@ img {
   align-items: inherit;
   flex-wrap: wrap;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .members img {
@@ -365,7 +377,6 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-
 }
 
 .parking-boc-section {
@@ -404,9 +415,8 @@ img {
   font-size: 22px;
   font-weight: 600;
   font-family: cursive;
-
 }
 
-.parking-boc-section.car-parked .parking-value{
+.parking-boc-section.car-parked .parking-value {
   background-color: red;
 }
