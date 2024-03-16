@@ -6,6 +6,8 @@ import Mandip from "../../assets/mandip.jpg";
 import Dipendra from "../../assets/dipendra.jpg";
 import Rahul from "../../assets/rahul.jpg";
 import Bishal from "../../assets/bishal.jpg";
+import Bikash from "../../assets/bikash.jpg";
+
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -81,34 +83,34 @@ const Home = () => {
         <div className="parking container">
           <div
             className={`parking-boc-section ${
-              data && data.v0 === 1 ? "car-parked" : ""
+              data && data.v0 <= 8 && data.v0!=0 ? "car-parked" : ""
             }`}
           >
             <div className="parking-name">Parking 1</div>
             <div className="parking-value">
-              {data && data.v0 === 1 ? "Booked" : "Value"}
+              {data && data.v0 <= 8 && data.v0!=0  ? "Booked" : "Value"}
             </div>
           </div>
 
           <div
             className={`parking-boc-section ${
-              data && data.v1 === 1 ? "car-parked" : ""
+              data && data.v1 <= 8  && data.v1!=0  ? "car-parked" : ""
             }`}
           >
             <div className="parking-name">Parking 2</div>
             <div className="parking-value">
-              {data && data.v1 === 1 ? "Booked" : "Value"}
+              {data && data.v1 <= 8 && data.v1!=0  ? "Booked" : "Value"}
             </div>
           </div>
 
           <div
             className={`parking-boc-section ${
-              data && data.v2 === 1 ? "car-parked" : ""
+              data && data.v2 <= 8 && data.v2!=0  ? "car-parked" : ""
             }`}
           >
             <div className="parking-name">Parking 3</div>
             <div className="parking-value">
-              {data && data.v2 === 1 ? "Booked" : "Value"}
+              {data && data.v2 <= 8 && data.v2!=0  ? "Booked" : "Value"}
             </div>
           </div>
         </div>
@@ -822,7 +824,7 @@ const Home = () => {
                         </div>
                         <div className="content-section">
                             <div className="profile">
-                                <img src="https://scontent.fsif1-1.fna.fbcdn.net/v/t39.30808-6/428622864_782427847124099_8656368217111113179_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Nic6yI25cRwAX8i8-cO&_nc_oc=AQn2OitBx13u4ZWojU2VALBUM4QWwUvE61EvYt3rQzZba7GWpTJIS_6s63-2XyhuH_A&_nc_ht=scontent.fsif1-1.fna&oh=00_AfCD3mbm5fAq3A5lTQNJo58vnGY6lkqEcZzZULYBsqjpDA&oe=65F81E48" alt="" />
+                                <img src={Bikash} alt="" />
                             </div>
                             <div className="details">
                                 <h3>Bikash Rashaili</h3>
