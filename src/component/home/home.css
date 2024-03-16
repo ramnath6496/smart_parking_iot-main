@@ -9,8 +9,14 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px 50px;
   height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +46,7 @@ nav ul li a {
 }
 
 .hero h2 {
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
@@ -90,15 +97,18 @@ nav ul li a {
 
 /* Testimonials Section Styles */
 .testimonials {
+  background-color: #eee;
   padding: 50px;
 }
 
 .testimonials h2 {
+  color: #333;
   margin-bottom: 20px;
 }
 
-.testimonial {
+.testimonial img {
   text-align: center;
+  border-radius: 10px;
 }
 
 /* Pricing Section Styles */
@@ -156,7 +166,7 @@ nav ul li a {
 
 /* Contact Us Section Styles */
 .contact-us {
-  background-color: #ddd;
+  background-color: #eee;
   padding: 50px;
   box-sizing: border-box;
 }

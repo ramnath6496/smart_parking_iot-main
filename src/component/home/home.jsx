@@ -36,16 +36,19 @@ const Home = () => {
       {/* Header Section */}
       <header>
         {/* Include your logo or website name */}
-        <h1>Smart Parking System</h1>
+        <div className="logo">
+        <h1>Logo</h1>
+        </div>
         {/* Navigation Menu */}
-        <nav>
+        <div className="right">
+          <nav>
           <ul>
             <li>
-              <a href="#slots">Parking Slots</a>
+              <a href="#slots">Slots</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#how-it-works">How It Works</a>
-            </li>
+            </li> */}
             <li>
               <a href="#testimonials">Testimonials</a>
             </li>
@@ -62,12 +65,13 @@ const Home = () => {
         </nav>
         {/* Optionally, include a call-to-action button */}
         <button>Sign Up</button>
+        </div>
       </header>
 
       {/* Hero Section */}
       <section className="hero">
         {/* Include a banner with key features */}
-        <h2>Your Smart Parking Solution</h2>
+        <h2>Smart Marking System</h2>
         <p>
           Revolutionize the way you grade and assess with our advanced parking
           system.
@@ -142,29 +146,15 @@ const Home = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="pricing">
+      {/* <section id="pricing" className="pricing"> */}
         {/* Pricing plans or packages */}
-        <h2>Pricing</h2>
+        {/* <h2>Pricing</h2> */}
         {/* Include pricing details and features comparison */}
-        <div className="plans">
+        {/* <div className="plans"> */}
           {/* Plan 1 */}
-          <img
-            src="https://www.bootstrapdash.com/blog/wp-content/uploads/2023/07/pricing-table.png"
-            alt=""
-          />
-          {/* <div className="plan"> */}
-          {/* <h3>Basic</h3>
-                        <p>$9.99/month</p>
-                        <ul>
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                        </ul> */}
-          {/* CTA button */}
-          {/* <button>Subscribe</button> */}
-          {/* </div> */}
-          {/* Additional plans */}
+          {/* <img src="https://www.bootstrapdash.com/blog/wp-content/uploads/2023/07/pricing-table.png" alt="" />
         </div>
-      </section>
+      </section> */}
 
       {/* About Us Section */}
       <section id="about-us" className="about-us">
