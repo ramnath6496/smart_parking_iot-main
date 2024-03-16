@@ -1,39 +1,84 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../helper/firebaseConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import "./nav.css";
 
 function Navbar() {
+  const [user] = useAuthState(auth);
+  const [isProfileDropdownOpen, setProfileDropdownOpen] = useState(true);
+
+  const toggleProfileDropdown = () =>
+    setProfileDropdownOpen(!isProfileDropdownOpen);
+
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setProfileDropdownOpen(true);
+    };
+
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <header>
-        {/* Include your logo or website name */}
-        <div className="logo" style={{background: "url(/logo1.png)"}}>
-          {/* <img src="/logo1.png" alt="lgog" srcset="" /> */}
-        </div>
-        {/* Navigation Menu */}
+        <Link to={"/"}>
+          <div className="logo" style={{ background: "url(/logo1.png)" }}></div>
+        </Link>
         <div className="right">
           <nav>
             <ul>
               <li>
-                <a href="#slots">Slots</a>
-              </li>
-              {/* <li>
-              <a href="#how-it-works">How It Works</a>
-            </li> */}
-              <li>
-                <a href="#testimonials">Testimonials</a>
+                <Link to={"/"}>
+                  <a href="#slots">Home</a>
+                </Link>
               </li>
               <li>
-                <a href="#pricing">Pricing</a>
-              </li>
-              <li>
-                <a href="#about-us">About Us</a>
+                <Link to={"/#about"}>
+                  <a href="#about-us">About Us</a>
+                </Link>
               </li>
               <li>
                 <a href="#contact-us">Contact Us</a>
               </li>
             </ul>
           </nav>
-          {/* Optionally, include a call-to-action button */}
-          <button>Sign Up</button>
+          {user ? (
+            <div
+              className="profile"
+              onMouseEnter={toggleProfileDropdown}
+              onMouseLeave={toggleProfileDropdown}>
+              <FontAwesomeIcon icon={faUser} />
+              <Link>{user.displayName}</Link>
+              {isProfileDropdownOpen && (
+                <div className="dropdown-content">
+                  <Link
+                    to="/past"
+                    onClick={(e) => e.stopPropagation()}>
+                    See Older Booking
+                  </Link>
+                
+                  <Link
+                    onClick={() => {
+                      auth.signOut();
+                      localStorage.clear();
+                    }}>
+                    Logout
+                  </Link>
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link to="/login">
+              <FontAwesomeIcon icon={faUser} />
+            </Link>
+          )}
         </div>
       </header>
     </>

@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+a {
+  text-decoration: none !important;
+  color: initial;
+}
+
+a:visited{
+  text-decoration: none !important;
+  color:inherit
+  ;
+}

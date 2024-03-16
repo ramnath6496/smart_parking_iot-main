@@ -66,11 +66,11 @@ const Slot = () => {
   }, []);
 
   const getSlotClassName = (slotData, slotStatus) => {
-    if (slotData === 1 && slotStatus === "booked") {
+    if (slotData <= 8 && slotStatus === "booked") {
       return "ParkBooked";
-    } else if (slotData === 1 && slotStatus === "") {
+    } else if (slotData <= 8 && slotStatus === "") {
       return "noBookPark";
-    } else if (slotData !== 1 && slotStatus === "booked") {
+    } else if (slotData <= 8 && slotStatus === "booked") {
       return "BookedOnly";
     } else {
       return "nullStatus";
@@ -208,21 +208,23 @@ const Slot = () => {
             </div>
           </div>
           {/* {  console.log(datawa.slot0 )} */}
-          {datawa.slot0 && datawa.slot0.timestamp != "" && (
-            <div className="btm-card">
-              <p>
-                {new Date(datawa.slot0.timestamp).toLocaleString([], {
-                  // month: "numeric",
-                  // day: "2-digit",
-                  // year: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  // second: "2-digit",
-                  hour12: true,
-                })}
-              </p>
-            </div>
-          )}
+          {datawa.slot0 &&
+            datawa.slot0.timestamp != "" &&
+            datawa.slot0.userID === myUid && (
+              <div className="btm-card">
+                <p>
+                  {new Date(datawa.slot0.timestamp).toLocaleString([], {
+                    // month: "numeric",
+                    // day: "2-digit",
+                    // year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    // second: "2-digit",
+                    hour12: true,
+                  })}
+                </p>
+              </div>
+            )}
         </div>
 
         <div
@@ -258,21 +260,23 @@ const Slot = () => {
               )}
             </div>
           </div>
-          {datawa.slot1 && datawa.slot1.timestamp != "" && (
-            <div className="btm-card">
-              <p>
-                {new Date(datawa.slot1.timestamp).toLocaleString([], {
-                  // month: "numeric",
-                  // day: "2-digit",
-                  // year: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  // second: "2-digit",
-                  hour12: true,
-                })}
-              </p>
-            </div>
-          )}
+          {datawa.slot1 &&
+            datawa.slot1.timestamp != "" &&
+            datawa.slot1.userID === myUid && (
+              <div className="btm-card">
+                <p>
+                  {new Date(datawa.slot1.timestamp).toLocaleString([], {
+                    // month: "numeric",
+                    // day: "2-digit",
+                    // year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    // second: "2-digit",
+                    hour12: true,
+                  })}
+                </p>
+              </div>
+            )}
         </div>
 
         <div
@@ -308,21 +312,23 @@ const Slot = () => {
               )}
             </div>
           </div>
-          {datawa.slot2 && datawa.slot2.timestamp != "" && (
-            <div className="btm-card">
-              <p>
-                {new Date(datawa.slot2.timestamp).toLocaleString([], {
-                  // month: "numeric",
-                  // day: "2-digit",
-                  // year: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  // second: "2-digit",
-                  hour12: true,
-                })}
-              </p>
-            </div>
-          )}
+          {datawa.slot2 &&
+            datawa.slot2.timestamp != "" &&
+            datawa.slot2.userID === myUid && (
+              <div className="btm-card">
+                <p>
+                  {new Date(datawa.slot2.timestamp).toLocaleString([], {
+                    // month: "numeric",
+                    // day: "2-digit",
+                    // year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    // second: "2-digit",
+                    hour12: true,
+                  })}
+                </p>
+              </div>
+            )}
         </div>
       </div>
 
