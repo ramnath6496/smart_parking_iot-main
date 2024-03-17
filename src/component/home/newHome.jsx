@@ -30,7 +30,7 @@ const Slot = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://blynk.cloud/external/api/getAll?token=bPLk6gY2q1BDNOU0N1mvOZOoGcGZEUCq"
+        "https://blynk.cloud/external/api/getAll?token=5R2lbSZMPr4qY2tMMGbvNCSDs_LQUU25"
       );
       setData({ v0: 1, v1: 0, v2: 1 });
     } catch (error) {
@@ -66,11 +66,11 @@ const Slot = () => {
   }, []);
 
   const getSlotClassName = (slotData, slotStatus) => {
-    if (slotData <= 8 && slotStatus === "booked") {
+    if (slotData === 1 && slotStatus === "booked") {
       return "ParkBooked";
-    } else if (slotData <= 8 && slotStatus === "") {
+    } else if (slotData === 1 && slotStatus === "") {
       return "noBookPark";
-    } else if (slotData <= 8 && slotStatus === "booked") {
+    } else if (slotData === 1 && slotStatus === "booked") {
       return "BookedOnly";
     } else {
       return "nullStatus";
@@ -175,7 +175,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v0, slotStatus["slot0"]) : "nullStatus"
-          }`}>
+          }`}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -201,7 +202,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot0");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -230,7 +232,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v1, slotStatus["slot1"]) : "nullStatus"
-          }`}>
+          }`}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -254,7 +257,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot1");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -282,7 +286,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v2, slotStatus["slot2"]) : "nullStatus"
-          } `}>
+          } `}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -306,7 +311,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot2");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -361,7 +367,8 @@ const Slot = () => {
       <div
         ref={dialogRef}
         className="dialog"
-        style={{ display: selectedSlot ? "block" : "none" }}>
+        style={{ display: selectedSlot ? "block" : "none" }}
+      >
         <div className="dialog-content">
           <span className="close" onClick={() => setSelectedSlot(null)}>
             &times;
@@ -392,7 +399,8 @@ const Slot = () => {
           </div>
           <button
             className="book-button"
-            onClick={() => handleBooking(name, vehicleNumber, mobile)}>
+            onClick={() => handleBooking(name, vehicleNumber, mobile)}
+          >
             Book Now
           </button>
         </div>
