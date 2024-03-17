@@ -176,7 +176,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v0, slotStatus["slot0"]) : "nullStatus"
-          }`}>
+          }`}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -202,7 +203,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot0");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -231,7 +233,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v1, slotStatus["slot1"]) : "nullStatus"
-          }`}>
+          }`}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -255,7 +258,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot1");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -283,7 +287,8 @@ const Slot = () => {
         <div
           className={`parking-boc-section ${
             data ? getSlotClassName(data.v2, slotStatus["slot2"]) : "nullStatus"
-          } `}>
+          } `}
+        >
           <div className="up-card">
             <div className="parking-name">
               <FontAwesomeIcon icon={faCar} />
@@ -307,7 +312,8 @@ const Slot = () => {
                       return;
                     }
                     setSelectedSlot("slot2");
-                  }}>
+                  }}
+                >
                   Book Slot
                 </button>
               )}
@@ -362,7 +368,8 @@ const Slot = () => {
       <div
         ref={dialogRef}
         className="dialog"
-        style={{ display: selectedSlot ? "block" : "none" }}>
+        style={{ display: selectedSlot ? "block" : "none" }}
+      >
         <div className="dialog-content">
           <span className="close" onClick={() => setSelectedSlot(null)}>
             &times;
@@ -393,7 +400,8 @@ const Slot = () => {
           </div>
           <button
             className="book-button"
-            onClick={() => handleBooking(name, vehicleNumber, mobile)}>
+            onClick={() => handleBooking(name, vehicleNumber, mobile)}
+          >
             Book Now
           </button>
         </div>
