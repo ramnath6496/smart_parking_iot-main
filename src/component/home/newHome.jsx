@@ -30,9 +30,10 @@ const Slot = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://blynk.cloud/external/api/getAll?token=bPLk6gY2q1BDNOU0N1mvOZOoGcGZEUCq"
+        "https://blynk.cloud/external/api/getAll?token=5R2lbSZMPr4qY2tMMGbvNCSDs_LQUU25"
       );
-      setData({ v0: 1, v1: 0, v2: 1 });
+      console.log(response.data)
+      setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -61,16 +62,16 @@ const Slot = () => {
     const interval = setInterval(() => {
       fetchData();
       fetchSlotStatus();
-    }, 2000);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
   const getSlotClassName = (slotData, slotStatus) => {
-    if (slotData <= 8 && slotStatus === "booked") {
+    if (slotData === 1 && slotStatus === "booked") {
       return "ParkBooked";
-    } else if (slotData <= 8 && slotStatus === "") {
+    } else if (slotData === 1 && slotStatus === "") {
       return "noBookPark";
-    } else if (slotData <= 8 && slotStatus === "booked") {
+    } else if (slotData === 0 && slotStatus === "booked") {
       return "BookedOnly";
     } else {
       return "nullStatus";

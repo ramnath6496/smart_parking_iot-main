@@ -79,10 +79,9 @@
   padding: 10px;
 }
 
-.profile .dropdown-content {
+.profile:hover .dropdown-content {
   display: block;
 }
-
 .dropdown-content a {
   color: #fff;
   text-decoration: none;

@@ -4,7 +4,7 @@ function Hero() {
   return (
     <>
       {/* Include a banner with key features */}
-      <h2>Smart Marking System</h2>
+      <h2>Smart Parking System</h2>
       <p>
         Revolutionize the way you grade and assess with our advanced parking
         system.
